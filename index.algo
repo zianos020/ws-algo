@@ -1,0 +1,43 @@
+PROCEDURE name (nom : STRING)
+VAR
+nom := STRING;
+i := INTEGER;
+BEGIN
+write(" give me your name")
+read : nom
+
+FOR i FROM 0 TO nom.length-1 STEP i++  DO
+WHILE (nom[i]<nom.length) DO
+    i++
+    until nom[i]=nom.length
+END_WHILE
+END_FOR
+END
+
+ALGORITHM words-number
+VAR
+    count := INTEGER
+    para := STRING
+    i:= INTEGER
+BEGIN
+    FOR i FROM 1 TO para.length STEP i++  DO
+        IF (para[i] = ' ') THEN
+            count=+1
+    END_FOR
+    write(count)
+END
+
+ALGORITHM number_vowels
+VAR
+    v:=['a','e','i','o','u']
+    word:= STRING
+    vcount:= INTEGER
+    i:=INTEGER
+BEGIN
+    FOR i FROM 0 TO word.length-1 STEP i++  DO
+        IF (v in word) THEN
+            vcount =+1
+        END_IF
+    END_FOR
+    write(vcount)
+END
